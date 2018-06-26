@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Homepage;
+use App\Dishes;
+use App\Orders;
+
 
 class HomeController extends Controller
 {
@@ -23,6 +27,18 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $alldishes = Orders::all();
+        return view('home', compact('alldishes', $alldishes));
+        //return view('home');
     }
+    
+    
+    
+    public function adminorders(){
+    }
+    
+    
+    
+    
+    
 }

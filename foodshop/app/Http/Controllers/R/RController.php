@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Homepage;
 use App\Dishes;
+use App\Orders;
 
 class RController extends Controller
 {
@@ -59,14 +60,24 @@ class RController extends Controller
     
     
     public function order(Request $r){
-        return "Dish ids: ".$r->dishids
-        ."       phone: ".$r->phone
-        ."      address: ".$r->address;
+        $order = new Orders;
+        
+        $order->phone = $r->input('phone');
+        $order->address = $r->input('address');
+        $order->dishes_ids = $r->input('dishids');
+        $order->save();
+        
+        
+        return "Dish ids: ".$order->dishes_ids
+        ."       phone: ".$order->phone
+        ."      address: ".$order->address;
     }
     
     
-    
-    
+    public function cuisine(){
+        $alldishes = Dishes::all();
+        return view('r.cuisine', compact('alldishes', $alldishes));
+    }
     
     
     

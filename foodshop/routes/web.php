@@ -19,16 +19,18 @@
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/', 'R\RController@index');
-Route::get('/index.html', 'R\RController@index');
-Route::get('/Cuisine.html', 'R\DishesController@index');
-Route::get('/cart', 'R\DishesController@index');
-Route::get('/Contacts.html', 'R\RController@contact');
-Route::get('/controller', 'PagesController@controller');
+Route::get('/',                 'R\RController@index');
+Route::get('/index.html',       'R\RController@index');
+//Route::get('/Cuisine.html', 'R\DishesController@index');
+Route::get('/Cuisine.html',     'R\RController@cuisine');
+Route::get('/cart',             'R\DishesController@index');
+Route::get('/Contacts.html',    'R\RController@contact');
 
-Route::post('/cart', 'R\RController@cart');
-Route::post('/order', 'R\RController@order');
+Route::post('/cart',            'R\RController@cart');
+Route::post('/order',           'R\RController@order');
 
-Route::resource('dishes', 'R\DishesController');
+Route::get('/controller',       'PagesController@controller');
+
+Route::resource('dishes',       'R\DishesController');
 Auth::routes();
 
