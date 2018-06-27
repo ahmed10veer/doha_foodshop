@@ -145,7 +145,7 @@
                                             <h2>Welcome <span>to Us!</span></h2>
                                             <figure><img src="{{$alldishes['welcome_id']->imagesmall}}" alt="" ></figure>
                                             <p class="pad_bot1">{{$alldishes['welcome_id']->description}}</p>
-                                            <a href="#" class="button1">Read More</a>
+                                            <a href="#" class="button1" style="visibility: hidden">Read More</a>
                                         </div>
                                     </div>
                                 </section>
@@ -155,7 +155,7 @@
                                             <h2>About <span>Us</span></h2>
                                             <figure><img src="{{$alldishes['about_us_id']->imagesmall}}" alt="" ></figure>
                                             <p class="pad_bot1">{{$alldishes['about_us_id']->description}}</p>
-                                            <a href="#" class="button1">Read More</a>
+                                            <a href="#" class="button1" style="visibility: hidden">Read More</a>
                                         </div>
                                     </div>
                                 </section>
@@ -166,7 +166,7 @@
                                             <figure><img src="{{$alldishes['our_services_id']->imagesmall}}" alt="" ></figure>
                                             <p class="pad_bot1">{{$alldishes['our_services_id']->description}}</p>
 
-                                            <a href="#" class="button1">Read More</a>
+                                            <a href="#" class="button1" style="visibility: hidden">Read More</a>
                                         </div>
                                     </div>
                                 </section>

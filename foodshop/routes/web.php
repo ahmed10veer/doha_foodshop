@@ -17,7 +17,6 @@
 
 // 
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/',                 'R\RController@index');
 Route::get('/index.html',       'R\RController@index');
@@ -28,6 +27,17 @@ Route::get('/Contacts.html',    'R\RController@contact');
 
 Route::post('/cart',            'R\RController@cart');
 Route::post('/order',           'R\RController@order');
+
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/homepageconfig', 'HomeController@homepageconfig');
+Route::get('/cuisine_edit', 'HomeController@cuisine_edit');
+Route::get('/article_edit', 'HomeController@article_edit');
+
+
+
+
+
 
 Route::get('/controller',       'PagesController@controller');
 

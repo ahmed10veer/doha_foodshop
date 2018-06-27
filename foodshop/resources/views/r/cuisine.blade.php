@@ -59,6 +59,7 @@
                             
                             @if(count($alldishes)>0)
                             @foreach($alldishes as $dish)
+                            @if($dish->id != '5' && $dish->id != '6' && $dish->id != '7')
                             <div class="wrapper">
                                 <figure class="left marg_right1"><img src="{{$dish->imagesmall}}" alt=""></figure>
                                 <div class="right"><button class="button-green" style="padding: 8px" onclick="addDish({{$dish->id}}, '{{$dish->title}}');">Add to Cart</button></div>
@@ -70,6 +71,7 @@
                                     {{$dish->description}}
                                 </p>
                             </div>
+                            @endif
                             @endforeach
                             @endif
                             

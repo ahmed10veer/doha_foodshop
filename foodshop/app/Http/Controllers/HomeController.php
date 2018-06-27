@@ -34,7 +34,29 @@ class HomeController extends Controller
     
     
     
+    public function homepageconfig(){
+        
+        return 'asdasdad';
+    }
+    
+    
+    
+    public function cuisine_edit(){
+        return 'asdasdad';
+    }
+    
+    
+    
+    
+    public function article_edit(){
+        return 'asdasdad';
+    }
+    
+    
+    
+    
     public function adminorders(){
+        return 'asdasdad';
     }
     
     

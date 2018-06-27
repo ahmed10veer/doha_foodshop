@@ -40,7 +40,7 @@
                             <ul id="menu">
                                 <li><a href="index.html">Restaurant</a></li>
                                 <li><a href="Cuisine.html">Cuisine</a></li>
-                                <li class="active"><a href="Contacts.html">Contacts</a></li>
+                                <li><a href="Contacts.html">Contacts</a></li>
                             </ul>
                         </nav>
                     </header>
@@ -52,7 +52,7 @@
                                 <div>
                                     <h2 class="letter_spacing"><span>Shopping Cart</span></h2>
                                     
-                                    <form id="orderForm" action="/order" method="post">
+                                    <form id="ContactForm" action="/order" method="post">
                                         <div>
                                             
                             @if(count($dishes)>0)
@@ -62,9 +62,11 @@
                                 <figure class="left marg_right1"><img src="{{$dish->imagesmall}}" alt=""></figure>
                                 <div class="right"><button class="button-green" style="padding: 8px" onclick="deleteDish({{$dish->id}}); return false;" type="button">Remove</button></div>
                                 <h4>
-                                    <a href="#">{{$dish->title}}</a><br>
-                                    {{$dish->summary}}
+                                    {{$dish->title}}
                                 </h4>
+                                <h6>
+                                    {{$dish->summary}}
+                                </h6>
                                 <p >
                                     {{$dish->description}}
                                 </p>
@@ -78,11 +80,11 @@
                                             </div>
                                             <div class="textarea_box">
                                                 <span>Your Address:</span>
-                                                <textarea name="address"></textarea>								
+                                                <textarea name="address"  cols="1" rows="1"></textarea>								
                                             </div>
                                             <input type="hidden" name="dishids" id="dishids">
-                                            <a href="#" class="button1" onClick="document.getElementById('orderForm').submit()">Send</a>
-                                            <a href="#" class="button1" onClick="document.getElementById('orderForm').reset()">Clear</a>
+                                            <a href="#" class="button1" onClick="document.getElementById('ContactForm').submit()">Place Order</a>
+                                            <a href="#" class="button1" onClick="document.getElementById('ContactForm').reset()">Clear</a>
                                         </div>
                                     </form>
                                 </div>

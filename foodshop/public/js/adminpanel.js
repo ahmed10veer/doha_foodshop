@@ -29,7 +29,7 @@ function postCookie() {
 
 function changeDishType(dishid, dishtypeid){
     
-    var dvalue = dishid+dishtypeid;
+    var dvalue = dishid+","+dishtypeid;
  
     var form = document.createElement("form");
     form.setAttribute("method", "post");

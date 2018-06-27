@@ -40,9 +40,9 @@
                         </a>
                     </li>
                     <li>
-                        <a class="nav-link" href="./typography.html">
+                        <a class="nav-link" href="./homepageconfig">
                             <i class="nc-icon nc-paper-2"></i>
-                            <p>Homepage</p>
+                            <p>Homepage Config</p>
                         </a>
                     </li>
                     <li style="visibility: hidden">

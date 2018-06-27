@@ -67,10 +67,10 @@ class RController extends Controller
         $order->dishes_ids = $r->input('dishids');
         $order->save();
         
-        
-        return "Dish ids: ".$order->dishes_ids
-        ."       phone: ".$order->phone
-        ."      address: ".$order->address;
+        return $this->index();
+//        return "Dish ids: ".$order->dishes_ids
+//        ."       phone: ".$order->phone
+//        ."      address: ".$order->address;
     }
     
     
