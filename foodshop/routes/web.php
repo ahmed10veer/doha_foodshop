@@ -27,6 +27,7 @@ Route::get('/Contacts.html',    'R\RController@contact');
 
 Route::post('/cart',            'R\RController@cart');
 Route::post('/order',           'R\RController@order');
+Route::get('/order',            'R\RController@index');
 
 
 Route::get('/home', 'HomeController@index')->name('home');
