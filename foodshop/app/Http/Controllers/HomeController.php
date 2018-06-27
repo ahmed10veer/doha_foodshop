@@ -36,13 +36,13 @@ class HomeController extends Controller
     
     public function homepageconfig(){
         
-        return 'asdasdad';
+        return $this->index();
     }
     
     
     
     public function cuisine_edit(){
-        return 'asdasdad';
+        return $this->index();
     }
     
     
